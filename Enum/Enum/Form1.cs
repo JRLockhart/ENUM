@@ -16,5 +16,12 @@ namespace Enum
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Random random = new Random();
+            Card card = new Card((Suit)random.Next(4), (Value)random.Next(1, 14));
+            MessageBox.Show(card.Name);
+        }
     }
 }
